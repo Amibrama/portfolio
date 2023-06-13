@@ -1,30 +1,45 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import next from '../../assets/next.png';
-import './Navigation.css';
+import React, { useState } from "react";
+import hamburger from "../../assets/hamburger.png";
+import close from "../../assets/close.png";
+import "./Navigation.css";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="navigation">
       <div className="nav-bar">
-        <h2>
-          IBRAHIM.<span>dev</span>
-        </h2>
+        <button className="cti">
+          <div className="CTI">Ibrahim.Dev</div>
+        </button>
+        <button
+          className={`menu-icon ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <img src={isOpen ? close : hamburger} alt="Menu" />
+        </button>
       </div>
-      <div className="links">
-        <NavLink to="/" exact activeClassName="active">
+      <div className={`links ${isOpen ? "open" : ""}`}>
+        <a href="#home" className="link" onClick={closeMenu}>
           Home
-        </NavLink>
-        <NavLink to="/about" exact activeClassName="active">
+        </a>
+        <a href="#about" className="link" onClick={closeMenu}>
           About
-        </NavLink>
-        <NavLink to="/project" exact activeClassName="active">
+        </a>
+        <a href="#project" className="link" onClick={closeMenu}>
           Project
-        </NavLink>
-      </div>
-      <div className="contactBtn">
-        ContactMe
-        <img src={next} alt="next" />
+        </a>
+        <a href="#contact" className="link" onClick={closeMenu}>
+          Contact
+        </a>
       </div>
     </div>
   );

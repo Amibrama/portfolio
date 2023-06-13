@@ -1,17 +1,21 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import Lottie from 'lottie-react';
-// import animationData from '../../assets/star.json';
-import developer from '../../assets/developer.json';
-import Data from './data';
-import './Home.css';
+import React, { useState, useEffect, useMemo } from "react";
+import Lottie from "lottie-react";
+import Blinker from "../Buttons/Blinker";
+import Resume from "../Buttons/Resume";
+import Code from "../Code/Code";
+import developer from "../../assets/developer.json";
+import Data from "./data";
+import Project from "../Project/Project";
+import Contact from "../Contact/Contact";
+import "./Home.css";
 
 const Home = () => {
-  const [currentWord, setCurrentWord] = useState('');
+  const [currentWord, setCurrentWord] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [typedCharacters, setTypedCharacters] = useState('');
+  const [typedCharacters, setTypedCharacters] = useState("");
 
   const words = useMemo(
-    () => ['FullStack Developer', 'Freelancer', 'Creator'],
+    () => ["FullStack Developer", "Freelancer", "Creator"],
     []
   );
 
@@ -21,7 +25,7 @@ const Home = () => {
       setTypedCharacters((prevTypedCharacters) => {
         if (prevTypedCharacters === word) {
           setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-          return '';
+          return "";
         } else {
           const nextCharacter = word[prevTypedCharacters.length];
           return prevTypedCharacters + nextCharacter;
@@ -34,18 +38,31 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="headerText">
-        <h3>
-          <span className="char">{typedCharacters}</span>
-          <span className="blink">|</span>
-        </h3>
+      <div className="hero">
+        <div className="headerText" id="home">
+          <Blinker />
+          <p>
+            Welcome to the world of{" "}
+            <span className="char">
+              <strong>Diaby Mohammed Ibrahim</strong>
+            </span>
+            , a visionary Full Stack Web Developer who builds digital wonders.
+            With an insatiable hunger for learning languages and frameworks, I
+            merge design and functionality to create captivating web
+            experiences. Embark on this exciting journey of innovation and
+            creativity with me.
+          </p>
+        </div>
       </div>
       <div className="straight"></div>
+      <div className="here">
+        <Code />
+      </div>
       <p className="quote">
         <span className="blue">
-          "Every great developer you know got there by solving problems <br />{' '}
+          "Every great developer you know got there by solving problems <br />{" "}
           they were unqualified to solve until they actually did it"
-        </span>{' '}
+        </span>{" "}
         <br /> <span className="black"> Patrick Mckenzie</span>
       </p>
       <div className="divide">
@@ -54,7 +71,7 @@ const Home = () => {
             <Lottie animationData={developer} />
           </div>
         </div>
-        <div className="about">
+        <div className="about" id="about">
           <h4 className="aa">
             About Me
             <span className="vr"></span>
@@ -62,30 +79,19 @@ const Home = () => {
           </h4>
 
           <Data />
-          <div className="contactss">
-            <button>contact-him</button>
+          <div className="bttn">
+            <Resume />
           </div>
-        </div>
-        <div className="socials">
-          <h4 className="aa">
-            Social
-            <span>- </span>
-            <span className="media">Media</span>
-          </h4>{' '}
-          <p>
-            {' '}
-            With a keyboard as his wand and a screen as his canvas, he weaved
-            digital magic that captivated users and transformed Websites.From
-            front-end wizardry to back-end sorcery, <strong>
-              Ibrahim
-            </strong>{' '}
-            mastered the art of full-stack development. He brought ideas to life
-            with pixel-perfect designs and crafted powerful back-end systems
-            that handled any challenge thrown his way.
-          </p>
+          <div className="underline"></div>
         </div>
       </div>
-      hello there
+      <div className="projectss" id="project">
+        <h2>Highlighted Projects</h2>
+        <Project />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 };
