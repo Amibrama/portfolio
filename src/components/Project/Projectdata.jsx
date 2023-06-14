@@ -27,13 +27,13 @@ const Projectdata = [
     github: "https://github.com/Dmambo/coincentral",
     desc: "CoinCentral is a dynamic cryptocurrency website that leverages the CoinGecko API to fetch up-to-date details about various coins. Stay informed about the latest trends, prices, and market data of cryptocurrencies through this user-friendly platform.",
   },
-  // {
-  //   image: "./math.png",
-  //   title: "Math Magician",
-  //   live: "https://mathmagician-6fyf.onrender.com/",
-  //   github: "https://github.com/Dmambo/math-magician",
-  //   desc: "Math Magician is a web application built with React and Redux that provides a simple platform for users to perform basic mathematical calculations. It also features three static pages for additional information and content.",
-  // },
+  {
+    image: "./math.png",
+    title: "Math Magician",
+    live: "https://mathmagician-6fyf.onrender.com/",
+    github: "https://github.com/Dmambo/math-magician",
+    desc: "Math Magician is a web application built with React and Redux that provides a simple platform for users to perform basic mathematical calculations. It also features three static pages for additional information and content.",
+  },
   // {
   //   image: "./book.png",
   //   title: "Awesome Books",
