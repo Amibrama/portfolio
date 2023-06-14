@@ -35,7 +35,7 @@ const Navigation = () => {
           About
         </a>
         <a href="#project" className="link" onClick={closeMenu}>
-          Project
+          Projects
         </a>
         <a href="#contact" className="link" onClick={closeMenu}>
           Contact
