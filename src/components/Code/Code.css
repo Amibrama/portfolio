@@ -5,7 +5,7 @@
     color: beige;
     max-width: 100%;
     margin: 50px;
-    height: 700px;
+    height: 820px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -61,7 +61,7 @@
 .middles {
     display: flex;
     padding: 8px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
     gap: 10px;
@@ -88,7 +88,7 @@
     display: flex;
     align-items: center;
     padding: 0 5px;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
 }
 
 .branches p {
