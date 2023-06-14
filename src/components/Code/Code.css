@@ -72,7 +72,7 @@
     width: 150px;
     display: flex;
     border-right: 1px solid beige;
-    border-bottom: 1px solid beige;
+    /* border-bottom: 1px solid beige; */
     height: 100%;
 }
 

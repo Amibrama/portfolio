@@ -2,6 +2,7 @@ import React from "react";
 import vscode from "../../assets/vscode.png";
 import code from "../../assets/code.png";
 import loca from "../../assets/location.png";
+import SocialLinks from "../Buttons/Social";
 import Lottie from "lottie-react";
 import resume from "../../assets/resume.json";
 
@@ -30,6 +31,7 @@ const Code = () => {
             <p>BACKEND</p>
             <p>TOOLS</p>
             <p>SOFTSKILLS</p>
+            <SocialLinks />
           </div>
         </div>
 
