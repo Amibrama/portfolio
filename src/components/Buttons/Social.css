@@ -60,3 +60,8 @@
 #github {
     fill: #333;
 }
+
+.social-btn a {
+    text-decoration: none;
+    background:transparent;
+}
